@@ -21,7 +21,7 @@ namespace _001
             
         }
 
-        static int[] CompararVectores(int[] v1, int[] v2, bool comp)
+        static int[] CompararVectores(int[] v1, int[] v2, bool comp)//foreach y devolver lista.
         {
             int[] resultadoAux = new int[v1.Length + v2.Length];
             int indiceAux = 0;
