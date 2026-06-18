@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,75 +12,75 @@ namespace _001
             int[] v1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int[] v2 = { 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
 
-            int[] resultado = CompararVectores(v1, v2, true); //aca dependiendo que queramos comparar, le pasamos true o false
+            List<int> resultado = CompararVectores(v1, v2, false); //aca dependiendo que queramos comparar, le pasamos true o false
 
-            for (int i = 0; i <resultado.Length; i++)
+            foreach (int numero in resultado)
             {
-                Console.WriteLine(resultado[i]);
+                Console.WriteLine(numero);
             }
-            
+
         }
 
-        static int[] CompararVectores(int[] v1, int[] v2, bool comp) //agregar for each y devolver listas para mejorar el codigo
+        static List<int> CompararVectores(int[] v1, int[] v2, bool comp) //agregar for each y devolver listas para mejorar el codigo
         {
-            int[] resultadoAux = new int[v1.Length + v2.Length];
-            int indiceAux = 0;
+            List<int> resultado = new List<int>();
 
-            for (int i = 0; i < v1.Length; i++)
+
+            foreach (int numeroV1 in v1)//recorro v1
             {
                 bool existe = false;
 
-                for (int j = 0; j < v2.Length; j++)
+                foreach (int numeroV2 in v2)//recorro v2
                 {
-                    if (v1[i] == v2[j])
+                    if (numeroV1 == numeroV2)
                     {
                         existe = true;
+                        break;
                     }
                 }
 
-                if (comp && existe)
+                if (comp == true)
                 {
-                    resultadoAux[indiceAux] = v1[i];
-                    indiceAux++;
+                    if (existe)
+                    {
+                        resultado.Add(numeroV1);
+                    }
+                }
+                else
+                {
+                    if (!existe)
+                    {
+                        resultado.Add(numeroV1);
+                    }
+
                 }
 
-                if (!comp && !existe)
-                {
-                    resultadoAux[indiceAux] = v1[i];
-                    indiceAux++;
-                }
+                
+                
             }
-
-            if (!comp)
+            if (comp == false)
             {
-                for (int i = 0; i < v2.Length; i++)
+                foreach (int numeroV2 in v2)
                 {
                     bool existe = false;
 
-                    for (int j = 0; j < v1.Length; j++)
+                    foreach (int numeroV1 in v1)
                     {
-                        if (v2[i] == v1[j])
+                        if (numeroV2 == numeroV1)
                         {
                             existe = true;
+                            break;
                         }
                     }
 
                     if (!existe)
                     {
-                        resultadoAux[indiceAux] = v2[i];
-                        indiceAux++;
+                        resultado.Add(numeroV2);
                     }
                 }
             }
 
-            int[] resultadoFinal = new int[indiceAux];
-
-            for (int i = 0; i < indiceAux; i++)
-            {
-                resultadoFinal[i] = resultadoAux[i];
-            }
-
-            return resultadoFinal;
+            return resultado;
         }
     }
 }
