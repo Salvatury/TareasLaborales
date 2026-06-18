@@ -25,7 +25,6 @@ namespace _001
         {
             List<int> resultado = new List<int>();
 
-
             foreach (int numeroV1 in v1)//recorro v1
             {
                 bool existe = false;
@@ -54,10 +53,8 @@ namespace _001
                     }
 
                 }
-
-                
-                
             }
+
             if (comp == false)
             {
                 foreach (int numeroV2 in v2)
@@ -79,7 +76,6 @@ namespace _001
                     }
                 }
             }
-
             return resultado;
         }
     }
