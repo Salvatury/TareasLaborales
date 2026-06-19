@@ -24,30 +24,116 @@ namespace _001.Ejercicios
             Console.WriteLine("Número octal: " + numeroOctal);
             Console.WriteLine("Número hexadecimal: " + numeroHexadecimal);
         }
+
         public static string ConvertirAOctal(int numeroDecimal)
         {
+            List<int> restos = new List<int>();
             string resultado = "";
 
             while (numeroDecimal > 0)
             {
-                int residuo = numeroDecimal % 8;
+                int resto = numeroDecimal % 8;
 
-                resultado = residuo.ToString() + resultado;
+                restos.Add(resto);
 
                 numeroDecimal = numeroDecimal / 8;
             }
 
+            for (int i = restos.Count - 1; i >= 0; i--)
+            {
+                resultado = resultado + restos[i].ToString();
+            }
+
             return resultado;
         }
+
         public static string ConvertirAHexadecimal(int numeroDecimal)
         {
+            List<int> restos = new List<int>();
             string resultado = "";
 
             while (numeroDecimal > 0)
             {
                 int residuo = numeroDecimal % 16;
 
-                string caracterHexadecimal = ConvertirResiduoAHexadecimal(residuo);
+                restos.Add(residuo);
+
+                numeroDecimal = numeroDecimal / 16;
+            }
+
+            for (int i = restos.Count - 1; i >= 0; i--)
+            {
+                string caracterHexadecimal = ConvertirResiduoAHexadecimal(restos[i]);
+
+                resultado = resultado + caracterHexadecimal;
+            }
+
+            return resultado;
+        }
+
+        public static string ConvertirResiduoAHexadecimal(int resto)
+        {
+            switch (resto)
+            {
+                case 10:
+                    return "A";
+                case 11:
+                    return "B";
+                case 12:
+                    return "C";
+                case 13:
+                    return "D";
+                case 14:
+                    return "E";
+                case 15:
+                    return "F";
+                default:
+                    return resto.ToString();
+            }
+        }
+    }
+}
+
+
+
+/*
+ * public static void Ejecutar()
+        {
+            int numeroDecimal = 147;
+
+            string numeroOctal = ConvertirAOctal(numeroDecimal);
+            string numeroHexadecimal = ConvertirAHexadecimal(numeroDecimal);
+
+            Console.WriteLine("Número decimal: " + numeroDecimal);
+            Console.WriteLine("Número octal: " + numeroOctal);
+            Console.WriteLine("Número hexadecimal: " + numeroHexadecimal);
+        }
+        
+        public static string ConvertirAOctal(int numeroDecimal)
+        {
+            string resultado = "";
+
+            while (numeroDecimal > 0)
+            {
+                int resto = numeroDecimal % 8;
+
+                resultado = resto.ToString() + resultado;
+
+                numeroDecimal = numeroDecimal / 8;
+            }
+
+            return resultado;
+        }
+
+        public static string ConvertirAHexadecimal(int numeroDecimal)
+        {
+            string resultado = "";
+
+            while (numeroDecimal > 0)
+            {
+                int resto = numeroDecimal % 16;
+
+                string caracterHexadecimal = ConvertirRestoAHexadecimal(resto);
 
                 resultado = caracterHexadecimal + resultado;
 
@@ -56,9 +142,9 @@ namespace _001.Ejercicios
 
             return resultado;
         }
-        public static string ConvertirResiduoAHexadecimal(int residuo)
+        public static string ConvertirRestoAHexadecimal(int resto)
         {
-            switch (residuo)
+            switch (resto)
             {
                 case 10:
                     return "A";
@@ -79,8 +165,7 @@ namespace _001.Ejercicios
                     return "F";
 
                 default:
-                    return residuo.ToString();
+                    return resto.ToString();
             }
         }
-    }
-}
+*/
