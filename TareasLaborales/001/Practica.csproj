@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Ejercicios\001_CompararVectores.cs" />
     <Compile Include="Ejercicios\002_PiedraPapelTijera.cs" />
+    <Compile Include="Ejercicios\003_OctalToHexadecimal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

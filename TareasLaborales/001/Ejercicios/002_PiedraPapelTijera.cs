@@ -20,7 +20,7 @@ namespace _001.Ejercicios
             List<string> jugadasPlayer2 = new List<string>();
 
             jugadasPlayer1.Add("R");
-            jugadasPlayer2.Add("P");
+            jugadasPlayer2.Add("S");
 
             jugadasPlayer1.Add("S");
             jugadasPlayer2.Add("S");

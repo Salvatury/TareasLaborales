@@ -10,9 +10,16 @@ namespace _001
     {
         static void Main(string[] args)
         {
-            //CompararVectores.Ejecutar();
-            PiedraPapelTijera.Ejecutar();
+            // quitar comentario para ejecutar los ejercicios
 
+            // Ejercicio 1: Comparar dos vectores
+            // CompararVectores.Ejecutar();
+
+            // Ejercicio 2: Piedra, papel o tijera
+            // PiedraPapelTijera.Ejecutar();
+
+            // Ejercicio 3: Convertir decimal a octal y hexadecimal
+            OctalToHexadecimal.Ejecutar();
 
         }
     }
