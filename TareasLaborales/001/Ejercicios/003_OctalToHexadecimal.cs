@@ -15,14 +15,14 @@ namespace _001.Ejercicios
         */
         public static void Ejecutar()
         {
-            int numeroDecimal = 147;
+            int numeroDecimal = 99999;
 
             string numeroOctal = ConvertirAOctal(numeroDecimal);
             string numeroHexadecimal = ConvertirAHexadecimal(numeroDecimal);
 
-            Console.WriteLine("Número decimal: " + numeroDecimal);
-            Console.WriteLine("Número octal: " + numeroOctal);
-            Console.WriteLine("Número hexadecimal: " + numeroHexadecimal);
+            Console.WriteLine("Numero decimal: " + numeroDecimal);
+            Console.WriteLine("Numero octal: " + numeroOctal);
+            Console.WriteLine("Numero hexadecimal: " + numeroHexadecimal);
         }
 
         public static string ConvertirAOctal(int numeroDecimal)
@@ -30,7 +30,7 @@ namespace _001.Ejercicios
             List<int> restos = new List<int>();
             string resultado = "";
 
-            while (numeroDecimal > 0)
+            while (numeroDecimal > 0) // validar cuando se ingresa 0
             {
                 int resto = numeroDecimal % 8;
 
@@ -52,7 +52,7 @@ namespace _001.Ejercicios
             List<int> restos = new List<int>();
             string resultado = "";
 
-            while (numeroDecimal > 0)
+            while (numeroDecimal > 0) // validar cuando se ingresa 0
             {
                 int residuo = numeroDecimal % 16;
 
@@ -104,9 +104,9 @@ namespace _001.Ejercicios
             string numeroOctal = ConvertirAOctal(numeroDecimal);
             string numeroHexadecimal = ConvertirAHexadecimal(numeroDecimal);
 
-            Console.WriteLine("Número decimal: " + numeroDecimal);
-            Console.WriteLine("Número octal: " + numeroOctal);
-            Console.WriteLine("Número hexadecimal: " + numeroHexadecimal);
+            Console.WriteLine("Numero decimal: " + numeroDecimal);
+            Console.WriteLine("Numero octal: " + numeroOctal);
+            Console.WriteLine("Numero hexadecimal: " + numeroHexadecimal);
         }
         
         public static string ConvertirAOctal(int numeroDecimal)
