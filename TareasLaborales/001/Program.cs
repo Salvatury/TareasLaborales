@@ -19,8 +19,10 @@ namespace _001
             // PiedraPapelTijera.Ejecutar();
 
             // Ejercicio 3: Convertir decimal a octal y hexadecimal
-            OctalToHexadecimal.Ejecutar();
+            //OctalToHexadecimal.Ejecutar();
 
+            // Ejercicio 4: Dibujar una escalera
+            Escalera.Ejecutar();
         }
     }
 }
