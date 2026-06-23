@@ -22,7 +22,10 @@ namespace _001
             //OctalToHexadecimal.Ejecutar();
 
             // Ejercicio 4: Dibujar una escalera
-            Escalera.Ejecutar();
+            //Escalera.Ejecutar();
+
+            // Ejercicio 5: Calcular daño de un ataque Pokémon
+            BatallaPokemon.Ejecutar();
         }
     }
 }
