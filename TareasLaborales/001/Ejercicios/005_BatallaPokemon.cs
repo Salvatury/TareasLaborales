@@ -20,7 +20,7 @@ namespace _001.Ejercicios
         public static void Ejecutar()
         {
             string tipoAtacante = "Fuego"; // Agua, Fuego, Planta, Electrico
-            string tipoDefensor = "Planta";
+            string tipoDefensor = "Fuego";
             int ataque = 80;
             int defensa = 40;
 
@@ -124,7 +124,7 @@ namespace _001.Ejercicios
 
         public static double CalcularDanio(int ataque, int defensa, double efectividad)
         {
-            double danio = 50 * (ataque / (double)defensa) * efectividad;
+            double danio = 50 * (ataque / (double)defensa) * efectividad; // 50 * (ataque / defensa) * efectividad
 
             return danio;
         }
@@ -137,12 +137,12 @@ namespace _001.Ejercicios
             double efectividad,
             double danio)
         {
-            Console.WriteLine($"Atacante: {tipoAtacante}");
-            Console.WriteLine($"Defensor: {tipoDefensor}");
-            Console.WriteLine($"Ataque: {ataque}");
-            Console.WriteLine($"Defensa: {defensa}");
-            Console.WriteLine($"Efectividad: x{efectividad}");
-            Console.WriteLine($"Daño causado: {danio}");
+            Console.WriteLine("Atacante: " + tipoAtacante);
+            Console.WriteLine("Defensor: " + tipoDefensor);
+            Console.WriteLine("Ataque: "+ ataque);
+            Console.WriteLine("Defensa: " + defensa);
+            Console.WriteLine("Efectividad: " + efectividad);
+            Console.WriteLine("Daño causado: " + danio);
         }
     }
 }
