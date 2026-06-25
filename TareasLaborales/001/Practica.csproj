@@ -48,6 +48,7 @@
     <Compile Include="Ejercicios\003_OctalToHexadecimal.cs" />
     <Compile Include="Ejercicios\004_Escalera.cs" />
     <Compile Include="Ejercicios\005_BatallaPokemon.cs" />
+    <Compile Include="Ejercicios\006_CifradoCesar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
