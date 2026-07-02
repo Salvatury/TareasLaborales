@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _001.Ejercicios
 {
-    internal class _006_CifradoCesar
+    internal class CifradoCesar
     {
         /*
          * Crea un programa que realize el cifrado César de un texto y lo imprima.
