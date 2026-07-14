@@ -25,7 +25,7 @@ namespace _001
             //Escalera.Ejecutar();
 
             // Ejercicio 5: Calcular daño de un ataque Pokémon
-            BatallaPokemon.Ejecutar();
+            // BatallaPokemon.Ejecutar();
         }
     }
 }
