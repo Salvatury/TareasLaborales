@@ -25,7 +25,13 @@ namespace _001
             //Escalera.Ejecutar();
 
             // Ejercicio 5: Calcular daño de un ataque Pokémon
-            BatallaPokemon.Ejecutar();
+            // BatallaPokemon.Ejecutar();
+
+            // Ejercicio 6: Cifrado César
+            // CifradoCesar.Ejecutar();
+
+            // Ejercicio 7: Comprimir palabra
+            ComprimirPalabra.Ejecutar();
         }
     }
 }

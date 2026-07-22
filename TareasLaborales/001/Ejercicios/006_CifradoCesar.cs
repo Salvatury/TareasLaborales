@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _001.Ejercicios
 {
-    internal class _006_CifradoCesar
+    internal class CifradoCesar
     {
         /*
          * Crea un programa que realize el cifrado César de un texto y lo imprima.
@@ -18,7 +18,57 @@ namespace _001.Ejercicios
 
         public static void Ejecutar()
         {
+            Console.Write("Ingrese un texto: ");
+            string texto = Console.ReadLine();
 
+            Console.Write("Ingrese el desplazamiento: ");
+            int desplazamiento = int.Parse(Console.ReadLine());
+
+            string textoCifrado = CifrarTexto(texto, desplazamiento);
+
+            Console.WriteLine("Texto original: " + texto);
+            Console.WriteLine("Texto cifrado: " + textoCifrado);
+        }
+
+        public static string CifrarTexto(string texto, int cifrado)
+        {
+            string resultado = "";
+
+            cifrado = cifrado % 26;
+
+            for (int i = 0; i < texto.Length; i++)
+            {
+                char caracter = texto[i];
+
+                if (caracter >= 'a' && caracter <= 'z')
+                {
+                    char nuevaLetra = (char)(caracter + cifrado);
+
+                    if (nuevaLetra > 'z')
+                    {
+                        nuevaLetra = (char)(nuevaLetra - 26);
+                    }
+
+                    resultado += nuevaLetra;
+                }
+                else if (caracter >= 'A' && caracter <= 'Z')
+                {
+                    char nuevaLetra = (char)(caracter + cifrado);
+
+                    if (nuevaLetra > 'Z')
+                    {
+                        nuevaLetra = (char)(nuevaLetra - 26);
+                    }
+
+                    resultado += nuevaLetra;
+                }
+                else
+                {
+                    resultado += caracter;
+                }
+            }
+
+            return resultado;
         }
 
 
